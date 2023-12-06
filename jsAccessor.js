@@ -61,15 +61,15 @@
 // // Display data from the object using a method:
 // console.log(person.fullName());
 
-// // Example 1:
-// const person = {
-//   firstName: "John",
-//   lastName: "Doe",
-//   country: "France",
-//   get count() {
-//     return this.country.toUpperCase();
-//   },
-// };
+// Example 1:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  country: "France",
+  get count() {
+    return this.country.toUpperCase();
+  },
+};
 
 // // Display data from the object using a method:
 // console.log(person);
@@ -103,62 +103,60 @@ The Object.defineProperty() method can also be used to add Getters and Setters:-
 
 // creating object:
 
-const myObject = {
-  score: 0,
-};
+// const myObject = {
+//   score: 0,
+// };
 
-Object.defineProperty(myObject, "reset", {
-  get: function ()  {
-    this.score = 10;
-  },
-});
-Object.defineProperty(myObject, "increment", {
-  get: function ()  {
-    this.score++;
-  },
-});
+// Object.defineProperty(myObject, "reset", {
+//   get: function ()  {
+//     this.score = 10;
+//   },
+// });
+// Object.defineProperty(myObject, "increment", {
+//   get: function ()  {
+//     this.score++;
+//   },
+// });
 
-Object.defineProperty(myObject, "decrement", {
-  get: function() {
-    this.score--;
-  },
-});
+// Object.defineProperty(myObject, "decrement", {
+//   get: function() {
+//     this.score--;
+//   },
+// });
 
-Object.defineProperty(myObject, "add", {
-    set: function (value) {
-        this.score += value;
-    }
-})
-Object.defineProperty(myObject, "reduce", {
-  set: function (value) {
-    this.score -= value;
-  },
-});
+// Object.defineProperty(myObject, "add", {
+//     set: function (value) {
+//         this.score += value;
+//     }
+// })
+// Object.defineProperty(myObject, "reduce", {
+//   set: function (value) {
+//     this.score -= value;
+//   },
+// });
 
+// console.log("Score before resetting: ", myObject.score);
+// myObject.reset;
+// console.log("Score after resetting: ", myObject.score);
+// console.log("Score before adding: ", myObject.score);
+// myObject.add = 5;
+// console.log("Score after adding: ", myObject.score);
+// console.log("Score before reducing: ", myObject.score);
+// myObject.reduce = -2;
+// console.log("Score after reducing: ", myObject.score);
+// myObject.increment;
+// console.log("Score after incrementing: ", myObject.score);
+// console.log("Score before decrementing: ", myObject.score);
+// myObject.decrement;
+// console.log("Score after decrementing: ", myObject.score);
 
-console.log("Score before resetting: ", myObject.score);
-myObject.reset;
-console.log("Score after resetting: ", myObject.score);
-console.log("Score before adding: ", myObject.score);
-myObject.add = 5;
-console.log("Score after adding: ", myObject.score);
-console.log("Score before reducing: ", myObject.score);
-myObject.reduce = -2;
-console.log("Score after reducing: ", myObject.score);  
-myObject.increment;
-console.log("Score after incrementing: ", myObject.score);
-console.log("Score before decrementing: ", myObject.score);
-myObject.decrement;
-console.log("Score after decrementing: ", myObject.score);
-
-/*----Score before resetting:  0
-Score after resetting:  10
-Score before adding:  10
-Score after adding:  15
-Score before reducing:  15
-Score after reducing:  17
-Score after incrementing:  18
-Score before decrementing:  18
-Score after decrementing:  17
------*/
-
+// /*----Score before resetting:  0
+// Score after resetting:  10
+// Score before adding:  10
+// Score after adding:  15
+// Score before reducing:  15
+// Score after reducing:  17
+// Score after incrementing:  18
+// Score before decrementing:  18
+// Score after decrementing:  17
+// -----*/
