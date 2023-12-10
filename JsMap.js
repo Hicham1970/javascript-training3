@@ -56,7 +56,7 @@ fruits.set("oranges", 200);
 
 // /**
 //  * Map.entries() Method:
-//  * 
+//  *
 //  */
 
 // // List all entries
@@ -76,4 +76,28 @@ fruits.set("oranges", 200);
 //   text += x + "\n";
 // }
 
-// console.log("the keys in the Map" +"\n" + text); 
+// console.log("the keys in the Map" +"\n" + text);
+
+
+
+/**
+ * 
+Map.values()
+The values() method returns an iterator object with the values in a Map:
+ */
+// List all values
+let text = "";
+for (const x of fruits.values()) {
+  text += x + "\n";
+}
+console.log("\nthe values in the Map " + "\n" + text);
+//
+// You can use the values() method to sum the values in a Map:
+// const totalValue = [...fruits.values()].reduce((a, b) => a + b, 0);
+// console.log(`Total Value is ${totalValue}`);
+// Sum all values
+let total = 0;
+for (const x of fruits.values()) {
+  total += x;
+}
+console.log(total); 
