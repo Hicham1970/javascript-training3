@@ -13,25 +13,26 @@ functionExtern(); // Je suis le pauvre variable interne
  */
 
 // function trimCorrection(draftArrière, draftAvant) {
-//     draftArrière = 6.25;
-//     draftAvant = 4.8;
-//     function trimObserve() {
-//         return (`${this.draftArrière} * ${this.draftAvant}`)  ;
-//     }
-//     return trimObserve;
+//   draftArrière = 6.25;
+//   draftAvant = 4.8;
+//   function trimObserve() {
+//     let result = draftArrière - draftAvant;
+//     return result;
+//   }
+//   return trimObserve;
 // }
-// const monTrim = trimCorrection();
+// let monTrim = trimCorrection();
 // console.log(monTrim());
-// Todo: revoir ce script why i get  6.25 * 4.8 , strings?
-//! Correction:
+// Todo: revoir ce script why i get  6.25 * 4.8 , strings? ca c'est reglé
+
+// //! Correction:
 function trimCorrection(draftArrière, draftAvant) {
-  // Declare des variables locales en utilizing 'let' ou 'var'
   draftArrière = 6.25;
   draftAvant = 4.8;
 
   function trimObserve() {
     // Utilize 'let' ou 'var' pour declare la variable locale 'result'
-    let result = draftArrière - draftAvant;
+    let result = Math.fround(draftArrière - draftAvant);
     return result;
   }
 
