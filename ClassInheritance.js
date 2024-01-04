@@ -1,13 +1,13 @@
 /**
 Inheritance= allows a new class to inherit properties and methods from an existing class (Parent ⇒ Child).
-To create a class inheritance, use the extends keyword.
+To create a class inheritance, use the "extends" keyword.
 A class created with a class inheritance inherits all the methods from another class:
-Example: Create a class named "Model" which will inherit the methods from the "Car" class:
+Example: Create 3 class named rabbit, fish and hawk  which will inherit the property and methods from the "Animal" class:
  */
 
 //? Create first the parent class: Animal
 class Animal {
-  alive = true; // an animal property
+    alive = true; // an animal property
 
   eat() {
     console.log(`This ${this.name} is eating`);
