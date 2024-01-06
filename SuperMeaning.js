@@ -20,7 +20,7 @@ class Rabbit extends Animal {
   }
   run() {
     console.log(`${this.name} can run`);
-    super.Move(this.runSpeed);
+    super.Move(this.runSpeed)   ;
   }
 }
 
