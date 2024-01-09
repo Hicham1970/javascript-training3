@@ -11,7 +11,9 @@ let promesse = new Promise((resolve, reject) => {
     // Simulation d'une opération asynchrone (par exemple une requête réseau)
     setTimeout(() => {
         // L'opération réussit et la promesse est résolue avec la valeur 'OK'
-        resolve('OK');
+        // resolve('OK');
+        // L'opération ne réussit pas et la promesse est rejetée avec la valeur 'NOT OK'
+        reject('Not OK');
     }, 1000);
 });
 

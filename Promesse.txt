@@ -1,0 +1,36 @@
+la syntax la plus simple d'une promesse :
+
+new Promise((resolve, reject)=>{
+    if(isSuccess){
+        resolve();
+    }else {
+        reject();
+    }
+}).then(()=>{
+    console.log("Promise resolved");
+}).catch(()=>{
+    console.log("Promise rejected");
+})
+
+
+
+
+
+
+
+
+Promise est un objet javascript qui promet un autre objet de lui retourné apres qu'il 
+ait effectué une tache. Les methods sont:
+- then : elle est appelée lorsque l'objet promise est résolu c'est 
+à dire que la condition "if" dans le constructeur de la Promesse était vrais
+Elle prend en paramètre 2 fonctions callback : la première sera exécutée
+si la promesse est résolue et la deuxième si elle est rejettée. Si
+la fonction de récupération ne contient pas d'erreur, on peut passer
+un second argument à cette fonction pour définir ce qu'elle doit renvoyer
+Si la fonction de récupération contient une erreur, alors le second argument
+sera passé à la prochaine fonction catch.
+- catch : Elle est appelée lorsque l'objet promise est rejeté c'est
+à dire que la condition "if" dans le constructeur de la Promesse était faux
+Cette méthode est optionnelle car par défaut il y a une fonction catch
+qui gère les erreurs mais qui n'imprime rien. Pour que cela soit visible    
+on peut ajouter une fonction catch personnalisée.

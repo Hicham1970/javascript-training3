@@ -7,9 +7,8 @@
  */
 
 function task1() {
-    console.log('Task1'); 
+  console.log("Task1");
 }
-
 
 function task2() {
   console.log("Task2");
@@ -17,13 +16,11 @@ function task2() {
 
 // task1();
 setTimeout(task1, 5000); // will  run after 5 seconds
-task2(); 
-
+task2();
 
 // const message = () => {
-//     console.log('This message is sent after a delay of 3 seconds'); 
+//     console.log('This message is sent after a delay of 3 seconds');
 // }
 setTimeout(() => {
   console.log("This message is sent after a delay of 3 seconds");
-}, 3000); 
-
+}, 3000);
