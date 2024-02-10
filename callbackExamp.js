@@ -1,4 +1,3 @@
-
 // Create an Array
 const myNumbers = [4, 1, -20, -7, 5, 9, -6];
 
