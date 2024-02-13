@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query SelectorAll vs QuerySelector</title>
+
+</head>
+
+<body>
+    <h1>What is the difference between this Two queries??</h1>
+    <p class="target">
+        This paragraph is the index 0
+    </p>
+    <p class="target">
+        This paragraph is the index 1
+    </p>
+    <p class="target">
+        This paragraph is the index 2
+    </p>
+    <p id="demo">change</p>
+
+    <script>
+        const myParagraph = document.querySelectorAll('p.target');
+
+        document.getElementById('demo').innerHTML = myParagraph[2].innerHTML; 
+    </script>
+
+
+</body>
+
+</html>

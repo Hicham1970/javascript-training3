@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Html Elements Attributes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript HTML DOM</h2>
+    <div>
+        <img id="image" src="/img/Image1.gif" width="120" height="120" alt="ico ico">
+    </div>
+    <script>
+        document.getElementById("image").src = "/img/image2.gif";
+    </script>
+
+    <p>The original image was image1.gif, but the script changed it to image2.gif</p>
+
+
+</body>
+
+</html>
