@@ -1,0 +1,11 @@
+{
+  "name": "javascript-training3",
+  "version": "1.0.0",
+  "description": "training scripts",
+  "main": "counter.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Hicham Garoum",
+  "license": "ISC"
+}
