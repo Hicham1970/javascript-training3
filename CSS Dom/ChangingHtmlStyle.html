@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Changing Html style</title>
+</head>
+
+<body>
+    <h1>Change the color of this text!</h1>
+    <p>The next paragraph is concerned by the issue :</p>
+    <p id="demo">All the text in this paragraph should be colored.</p>
+
+    <script>
+        let p = document.getElementById("demo");
+        p.style.color = "blue";
+        p.style.fontFamily = "Arial";
+        p.style.fontSize = "2em"; 
+    </script>
+</body>
+
+</html>
