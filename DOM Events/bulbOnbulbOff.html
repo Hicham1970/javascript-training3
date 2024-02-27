@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightning </title>
+    <script>
+        function lighton() {
+            document.getElementById('myImage').src = "bulbon.png";
+        }
+        function lightoff() {
+            document.getElementById('myImage').src = "bulboff.png";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onmousedown Attribute</h2>
+    
+    <img id="myImage" onmousedown="lighton()" onmouseup="lightoff()" src="bulboff.png" width="550" height="600" />
+    
+    <p>Click mouse and hold down!</p>
+
+
+</body>
+
+</html>

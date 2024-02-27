@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Calls a function</title>
+</head>
+
+<body>
+    <h1>A Function called after an event handler</h1>
+    <p>Click the text to change the content.</p>
+    <h2 onclick="changeText(this)">Hello World!</h2>
+
+    <script>
+        function changeText(element) {
+            element.innerHTML = "HI EVERYBODY";
+            element.style.color = "red";
+            element.style.fontSize = "4rem";
+        }
+    </script>
+</body>
+
+</html>
