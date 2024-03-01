@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloner un paragraph avec add eventListener</title>
+    <style>
+      p.clone {
+        color: blue;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Paragraph to Cloner</h1>
+    <p>Je suis le Paragraph Qu'on va cloner</p>
+    <h2 id="title">
+      The add event listener is more used when we need to add an event to an
+      element that already exists/ or not exists in the DOM.
+    </h2>
+
+    <script>
+      let myP = document.querySelector("p");
+      myP.onclick = function () {
+        let newP = myP.cloneNode(true); // Permet le clonage de tout le paragraph (contenu et structure)
+
+        document.body.appendChild(newP); // Ajoute le paragraph clone à la page HTML
+        // create a new class in the cloned para and change his innerHtml:
+        newP.classList.add("clone");
+        newP.innerHTML = "Je suis le Paragraph Cloné";
+      };
+      let cloned = document.querySelector(".clone");
+      // cloned.onclick = function () {
+      //   document.body.removeChild(cloned); // Supprime le paragraph cloné de la page HTML
+      //   // remove the class from the cloned paragraph:
+      //   // cloned.classList.remove("clone");
+      //   cloned.innerHTML = "Je suis le Paragraph Qu'on a cloné et qui va disparate";
+      // }
+      document.addEventListener("clone", function (event) {
+        if (event.target.classList === "clone") {
+          console.log(event.target);
+        }
+      });
+    </script>
+  </body>
+</html>

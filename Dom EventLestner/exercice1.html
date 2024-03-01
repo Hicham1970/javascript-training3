@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddEventListener</title>
+  </head>
+  <body>
+    <h1>Add Event Listener</h1>
+    <button type="button">Click Me !</button>
+    <p id="demo"></p>
+    <script>
+      /**
+       * Sets the innerHTML property of the myP element to display a message.
+       * This function is likely an event handler that displays a message when called, such as on a button click.
+       */
+      function one() {
+        myP.innerHTML = "Message from Onclick1";
+      }
+
+      function two() {
+        myP.innerHTML = "Message from Onclick2";
+      }
+
+      // Get the button and paragraph elements.
+      let myP = document.getElementById("demo");
+      let btn = document.querySelector("button");
+
+      btn.addEventListener("click", one);
+      btn.addEventListener("click", two);
+      btn.addEventListener("click", one);
+    </script>
+  </body>
+</html>
