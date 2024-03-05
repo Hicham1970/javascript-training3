@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La method preventEvent</title>
+  </head>
+  <body>
+    <h1>La methode preventEvent</h1>
+    <button type="button">Button 1</button>
+    <button type="button">Button 2</button>
+    <button type="button">Button 3</button>
+    <a href="https://www.google.com">Google</a>
+
+    <script>
+      let buttons = document.querySelectorAll("button, a");
+      function preventDefault(event) {
+        event.preventDefault();
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", preventDefault);
+      });
+    </script>
+  </body>
+</html>

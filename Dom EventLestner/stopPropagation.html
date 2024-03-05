@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La method stop propagation</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button type="button">Bonjour</button>
+    </div>
+    <button type="button">Bonsoir</button>
+    <a href="https://www.w3school.com">W3school</a>
+    <script>
+      let buttons = document.querySelectorAll("button,  a");
+      function OnButtonClick(event) {
+        console.log("The Button was Clicked!!");
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", OnButtonClick);
+      });
+      // add an event to the div:
+      document.querySelector("div").addEventListener("click", function () {
+        console.log("You clicked on the Div!");
+      });
+    </script>
+  </body>
+</html>

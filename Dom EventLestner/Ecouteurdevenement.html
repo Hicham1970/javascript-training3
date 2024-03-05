@@ -6,12 +6,29 @@
     <title>Ecouteur d'évènement</title>
   </head>
   <body>
-    <button type="button">Click Me!</button>
+    <!-- <button type="button"><span>click the span</span></button> -->
+    <button type="button">click Me btn1!</button>
+    <button type="button">click Me btn2!</button>
+    <button type="button">click Me btn3!</button>
 
     <script>
-      let button = document.querySelector("button");
-      button.addEventListener("click", function (event) {
-        console.log(event);
+      //   let button = document.querySelector("button");
+      //   button.addEventListener("click", function (event) {
+            //  console.log(event)
+      //     console.log(event.target, event.currentTarget);
+      //   });
+
+      // pointerevent example : click, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter, mouseleave, wheel, mousewheel....
+
+      let buttons = document.querySelectorAll("button");
+
+      function get_which_button_was_clicked(event) {
+        console.log(event.currentTarget);
+        console.log(this);
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", get_which_button_was_clicked);
       });
     </script>
   </body>

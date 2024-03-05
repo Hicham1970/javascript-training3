@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parameters addEventListener</title>
+    <style>
+        div {
+            width: 120px;
+            height: 120px;
+            background-color: brown;
+        }
+
+        button {
+            color: blanchedalmond;
+            background-color: blueviolet;
+            border-radius: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Parameters of the addEventListener</h1>
+    <div>
+        <button type="button">Click me 1!</button>
+    </div>
+    <button type="button">Click me 2!</button>
+    <button type="button">Click me 3!</button>
+    <a href="https://www.google.com">Google</a>
+    <script>
+        let elements = document.querySelectorAll("button, a");
+        const On_Btn_Click = (event) => {
+            console.log("Button clicked");
+        };
+
+        elements.forEach((element) => {
+            element.addEventListener(
+                "click",
+                 On_Btn_Click,
+                 {once:true} // Only execute once per event listener
+        )});
+
+        document.querySelector("div").addEventListener(
+            "click",
+            function (e) {
+                console.log("Div clicked");
+                e.stopPropagation( );
+            }, {
+                capture: true
+            }
+        );
+
+        //Once is true only execute one time and then remove event listener
+    </script>
+</body>
+
+</html>
+
+</html>
