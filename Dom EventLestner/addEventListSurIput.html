@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Event Listener sur un input</title>
+  </head>
+  <body>
+    <form action="">
+      Enter your firstName:<input
+        type="text"
+        title="Name"
+        name="firstName"
+      /><br /><br />
+      <button type="button">Submit</button>
+    </form>
+    <script>
+      document.querySelector("input").addEventListener("input", function (e) {
+        console.log("input", e.currentTarget.value());
+      });
+    </script>
+  </body>
+</html>

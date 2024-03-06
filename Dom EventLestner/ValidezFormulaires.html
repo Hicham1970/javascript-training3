@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation des forms</title>
+    <style>
+      p {
+        color: brown;
+        font-size: 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Validate forms with events</h1>
+    <form id="inscription">
+      <input type="text" id="pseudo" name="pseudo" placeholder="Name" /><br />
+      <input type="email" id="email" name="email" placeholder="Email" /><br />
+      <input
+        type="email"
+        name="confEmail"
+        id="email2"
+        placeholder="Confirm your email"
+      /><br />
+      <input
+        type="password"
+        id="psw"
+        name="password"
+        placeholder="psw"
+      /><br /><br />
+      <input type="submit" value="inscription" /><br />
+    </form>
+    <p id="error"></p>
+    <script src="app2.js"></script>
+  </body>
+</html>
