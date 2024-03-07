@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add An Event Listener to input</title>
+    <style>
+      body {
+        background-color: black;
+        color: withe;
+        padding: 30px;
+        margin: 30px;
+      }
+      label {
+        color: white;
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" placeholder="Name" />
+      <input type="submit" value="Inscription" />
+    </form>
+    <script>
+      //   document.getElementById("name").addEventListener("keydown", function (e) {
+      //     console.log("the keydown is : " + e.key);
+      //   });
+      document.addEventListener("keydown", function (e) {
+        if (e.ctrlKey === true && e.key === "k") {
+          e.preventDefault();
+          console.log("racourcis");
+        } else {
+          console.log(e.key);
+        }
+      });
+    </script>
+  </body>
+</html>
