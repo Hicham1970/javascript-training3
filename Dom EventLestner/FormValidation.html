@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>An Other Kind of forms validation</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Validation - Formulaire</h1>
+    <form
+      action=""
+      method="post"
+      name="formulaire"
+      onsubmit="return verifier_form()"
+    >
+      First Name :
+      <input
+        type="text"
+        name="firstName"
+        placeholder="Your Name"
+        id="fn"
+      /><br /><br />
+      Last Name :
+      <input
+        type="text"
+        id="ln"
+        name="lastName"
+        placeholder="Your LastName"
+      /><br /><br />
+      Email :
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your Email"
+      /><br /><br />
+      Password :
+      <input
+        type="password"
+        name="password"
+        placeholder="psw"
+        id="psw"
+      /><br /><br />
+      Confirmation password :
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="psw"
+        id="cp"
+      /><br /><br />
+      Select Sex :
+      <select name="genre" title="sex selection" id="sel">
+        <option value="Choose"></option>
+        <option value="H">Male</option>
+        <option value="F">Female</option>
+        <option value="U">Unknown</option></select
+      ><br /><br />
+      Choisissez votre module,3 choix obligatoires !<br /><br />
+      <fieldset>
+        <input
+          type="checkbox"
+          title="js"
+          name="module"
+          id="check"
+          value="Javascript"
+        />Javascript <br />
+        <input type="checkbox" title="css" name="module" value="Css" /> Css
+        <br />
+        <input type="checkbox" title="node" name="module" value="Nodejs" />
+        Nodejs <br />
+        <input type="checkbox" title="python" name="module" value="Python" />
+        Python <br />
+        <input type="checkbox" title="React" name="module" value="React" />
+        React <br />
+        <input type="checkbox" title="PHP" name="module" value="PHP" /> PHP
+        <br />
+        <input type="checkbox" title="C#" name="module" value="C#" /> C# <br />
+      </fieldset>
+      <br /><br />
+      <label for="formulaire" id="error"></label><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="validation.js"></script>
+  </body>
+</html>
