@@ -41,4 +41,3 @@ function getNumber1() {
 function getNumber2() {
   return inputs[1].value;
 }
-

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormDate Object</title>
+  </head>
+  <body>
+    <div id="output">
+      <pre></pre>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let fd = new FormData();
+        // Add a simple key/value pair:
+        fd.append("name", "Hicham");
+        fd.append("age", 53);
+        fd.append("Created_dt", Date.now());
+
+        console.log(Array.from(fd));
+        for (let obj of fd) {
+          console.log(obj);
+        }
+        document.querySelector("#output pre").textContent = JSON.stringify(
+          Array.from(fd),
+          "\t",
+          2
+        );
+      });
+    </script>
+  </body>
+</html>
