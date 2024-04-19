@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deeply nested Javascript Objects</title>
+    <style>
+        body{
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            padding: 12px;
+
+        }
+    </style>
+  </head>
+  <body>
+    <h3>we can also reach the nested  object with the deconstruction assignment:</h1>
+    <p id="demo"></p>
+
+    <script>
+      const vehicleOne = {
+        brand: "Ford",
+        model: "Mustang",
+        type: "car",
+        year: 2021,
+        color: "red",
+        registration: {
+          city: "Houston",
+          state: "Texas",
+          country: "USA",
+        },
+      };
+
+      let {
+        model,
+        type,
+        year,
+        color,
+        registration: { city, state, country },
+      } = vehicleOne;
+
+      myVehicle(vehicleOne);
+
+      function myVehicle(vehicleOne) {
+        const message =
+          "My lovely car " +
+          model +
+          " have a " +
+          color +
+          ", color and " +
+          " is registered in " +
+          state +
+          ", which is located in the " +
+          country +
+          ".";
+
+        document.getElementById("demo").innerHTML = message;
+      }
+    </script>
+  </body>
+</html>

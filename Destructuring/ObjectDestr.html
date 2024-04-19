@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Destructuring</title>
+  </head>
+  <body>
+    <h1>Destructuring a javascript Objet</h1>
+   
+<p id="demo"></p>
+  
+<script>
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red'
+}
+
+myVehicle(vehicleOne);
+
+
+// old way
+// function myVehicle(vehicle) {
+//   const message = 'My ' + vehicle.type + ' is a ' + vehicle.color + ' ' + vehicle.brand + ' ' + vehicle.model + '.';
+// }
+
+// deconstruction way : new way
+function myVehicle({type, color, brand, model}) {
+  const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+  document.getElementById("demo").innerHTML = message;
+}
+</script>
+  </body>
+</html>

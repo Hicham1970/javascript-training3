@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deconstruction of an array</title>
+</head>
+<body>
+      
+<script>
+function calculate(a, b) {
+  const add = a + b;
+  const subtract = a - b;
+  const multiply = a * b;
+  const divide = a / b;
+
+  return [add, subtract, multiply, divide];
+}
+
+const [add, subtract, multiply, divide] = calculate(4, 7);
+
+document.write("<h1>Sum: " + add + "</h1>");
+document.write("<h1>Difference " + subtract + "</h1>");
+document.write("<h1>Product: " + multiply + "</h1>");
+document.write("<h1>Quotient " + divide + "</h1>");
+</script>
+
+    
+</body>
+</html>

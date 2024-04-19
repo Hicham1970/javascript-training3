@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
       res.end("Erreur interne du serveur");
     } else {
       res.writeHead(200, { "Content-Type": "text/html" });
-      res.end(data);
+      res.end(data);io
     }
   });
 });
