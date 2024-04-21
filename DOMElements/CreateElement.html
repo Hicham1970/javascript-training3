@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Dom Elements</title>
+  </head>
+  <body>
+    <h2>JavaScript HTML DOM</h2>
+    <p>Add a new HTML Element.</p>
+
+    <div id="div1">
+      <p id="p1">This is a paragraph.</p>
+      <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <script>
+      // créer un élément div et l'ajouter au document:
+      const para = document.createElement("p"); // créer le paragraph
+      const node = document.createTextNode("This is new."); //  ajouter du texte à l'élément
+      para.appendChild(node);// Ajouter le text au nouveau element 
+      const element = document.getElementById("div1");// Selectionner le parent du nouveau element
+      element.appendChild(para);// Et  enfin ajouter le tout au parent
+    </script>
+  </body>
+</html>

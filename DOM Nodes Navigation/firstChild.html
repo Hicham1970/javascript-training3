@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access the first child</title>
+</head>
+<body>
+    <h1 id="émetteur">Ce text va être transférer  dans un élément HTML.</h1>
+    <p id="réceptionnaire1"></p>
+    <p id="réceptionnaire2"></p>
+    <p id="réceptionnaire3"></p>
+    <script>
+        let paragraphe1 = document.getElementById('réceptionnaire1').innerHTML= document.getElementById('émetteur').innerHTML; 
+        // firstChild.nodeValue === innerHTML
+        let paragraphe2 = document.getElementById('réceptionnaire2').innerHTML= document.getElementById('émetteur').firstChild.nodeValue; 
+                // firstChild === childNodes[0]
+        let paragraphe3 = document.getElementById('réceptionnaire3').innerHTML= document.getElementById('émetteur').childNodes[0].nodeValue; 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Html Element</title>
+  </head>
+  <body>
+    <h1>Creation of an Html element using insertBefore () method .</h1>
+    <p>
+      The appendChild() method in the previous example, appended the new element
+      as the last child of the parent. If you don't want that you can use the
+      insertBefore() method:
+    </p>
+    <div id="div1">
+      <p id="p1">This is the first target paragraph.</p>
+      <p id="p2">This is another paragraph targeted also.</p>
+    </div>
+
+    <script>
+      const para = document.createElement("p");
+      const node = document.createTextNode("This is the new paragraph , created the last and displayed as the first child of the div .");
+      para.appendChild(node);
+
+      const element = document.getElementById("div1");
+      const child = document.getElementById("p1");
+      element.insertBefore(para, child);
+    </script>
+  </body>
+</html>

@@ -53,5 +53,6 @@
         "vitesse",
         "votre"
     ],
-    "cSpell.language": "en,fr"
+    "cSpell.language": "en,fr",
+    "livePreview.defaultPreviewPath": "/DOMElements/index.html"
 }
