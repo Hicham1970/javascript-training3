@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Element</title>
+  </head>
+  <body>
+    <div>
+      <p id="p1">This is the targeted paragraph hwo will be removed after the button click.</p>
+      <p id="p2">This is another paragraph.</p>
+      <p>The remove() method does not work in older browsers, see how to use removeChild() instead.</p>
+      <button type="button" onclick="remove()">
+        Click to remove the first paragraph.
+      </button>
+    </div>
+
+    <script>
+      function remove() {
+        const btn = document.querySelector("button");
+        const element = document.getElementById("p1");
+        element.remove();
+      }
+      btn.addEventListener("click", remove());
+    </script>
+  </body>
+</html>

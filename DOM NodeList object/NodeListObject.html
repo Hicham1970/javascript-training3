@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeList Object</title>
+  </head>
+  <body>
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Hello World!</p>
+    <p>
+      Je suis en train de tester cette nouvelle extension chrome de capture
+      d’écran
+    </p>
+
+    <p>Hello Norway!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const myNodeList = document.querySelectorAll("p");
+
+      document.getElementById("demo").innerHTML =
+        "The innerHTML of the second paragraph is: " + myNodeList[1].innerHTML;
+      // Accessing properties and methods on a NodeList object:
+      console.log(myNodeList.length);
+      for (i = 0; i < myNodeList.length; i++) {
+        console.log(`Item ${i + 1} is ${myNodeList[i].nodeName}`);
+      }
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open deconstruction.html",
-            "file": "e:\\Dev\\javascript\\W3school\\javascript training3\\deconstruction.html"
+            "file": "e:\\Dev\\javascript\\W3school\\javascript training3\\myCol.html"
         },
         {
             "type": "pwa-msedge",
@@ -17,7 +17,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "c:\\Users\\hicham_garroum\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "url": "E:\\Dev\\javascript\\W3school\\javascript training3\\DOM Collections\\myCol.html", // Provide your project's url to finish configuring
             "presentation": {
                 "hidden": true
             }
@@ -30,7 +30,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "c:\\Users\\hicham_garroum\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "url": "E:\\Dev\\javascript\\W3school\\javascript training3\\DOM Collections\\myCol.html",
             "presentation": {
                 "hidden": true
             }
@@ -39,7 +39,7 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "c:\\Users\\hicham_garroum\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "url":"E:\\Dev\\javascript\\W3school\\javascript training3\\DOM Collections\\myCol.html",
             "presentation": {
                 "hidden": true
             }

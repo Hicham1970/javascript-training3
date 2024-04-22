@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Difference between NodeList & HtmlCollection objects</title>
+  </head>
+  <body>
+    <h1>Difference</h1>
+    <div class="collection1">
+      <p class="ire1">I'm a paragraph.</p>
+      <p class="ire2">I'm a paragraph.</p>
+      <p class="ire3">I'm a paragraph.</p>
+      <p class="ire4">I'm a paragraph.</p>
+    </div>
+    <div class="collection2">
+      <p class="ire1">I'm a paragraph.</p>
+      <p class="ire2">I'm a paragraph.</p>
+      <p class="ire3">I'm a paragraph.</p>
+      <p class="ire4">I'm a paragraph.</p>
+    </div>
+    <div class="collection3">
+      <p class="ire1">I'm a paragraph.</p>
+      <p class="ire2">I'm a paragraph.</p>
+      <p class="ire3">I'm a paragraph.</p>
+      <p class="ire4">I'm a paragraph.</p>
+    </div>
+    <script>
+      // selectionner les div par getElementsByTagName:
+      const my_div_by_tagName = document.getElementsByTagName("div");
+      console.log(my_div_by_tagName);
+      // selectionner le premier div par className:
+      const myDiv_by_className = document.getElementsByClassName("collection1");
+      console.log(myDiv_by_className[0]);
+      console.log(myDiv_by_className[0].className);
+      console.log(myDiv_by_className[0].children);
+
+      // selection des divs par le querySelectorAll() method:
+
+      const myDiv_by_querySelectorAll = document.querySelectorAll("div");
+      console.log(myDiv_by_querySelectorAll);
+    </script>
+  </body>
+</html>
